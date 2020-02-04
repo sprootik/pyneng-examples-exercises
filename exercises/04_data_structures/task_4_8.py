@@ -19,9 +19,21 @@
 '''
 
 ip = '192.168.3.1'
-ip_list = ip.split('.')
+#data = ip.split('.')
+oct1, oct2, oct3, oct4 = ip.split('.')
 
-template = "{:<10}{:<10}{:<10}{:<10}\n{:<10}{:<10}{:<10}{:<10}"
+ip_template = '''
+{0:<8} {1:<8} {2:<8} {3:<8}
+{0:08b} {1:08b} {2:08b} {3:08b}
+'''
 
-print (template.format(ip_list[0],ip_list[1],ip_list[2],ip_list[3],'{:08b}'.format(int(ip_list[0])),'{:08b}'.format(int(ip_list[1])),'{:08b}'.format(int(ip_list[2])),'{:08b}'.format(int(ip_list[3]))))
+print(ip_template.format(int(oct1), int(oct2), int(oct3), int(oct4)))
+
+#print (data[0], data[1], data[2], data[3])
+#print ('{:10}{:10}{:10}{:10}'.format(int(data[0]), int(data[1]), int(data[2]), int(data[3])))
+#print ('{:08b}  {:08b}  {:08b}  {:08b}'.format(int(data[0]), int(data[1]), int(data[2]), int(data[3])))
+
+#print (data[0], data[1], data[2], data[3])
+#print (bin(int(data[0],10)).replace('0b',''), bin(int(data[1],10)).replace('0b',''), bin(int(data[2],10)).replace('0b',''), bin(int(data[3],10)).replace('0b',''))
+
 

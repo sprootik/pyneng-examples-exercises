@@ -10,3 +10,6 @@
 '''
 
 mac = 'AAAA:BBBB:CCCC'
+
+data = mac.replace(':','')
+print ('{:b}'.format(int(data,16)))
